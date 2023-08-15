@@ -4,7 +4,7 @@ var err = false;
 var emotes = [
     {name:"earth",action:[{type:"anim",anim:"earth_fwd", ticks:20},{type:"idle"}]},
     {name:"surf",action:[{type:"anim",anim:"surf_fwd", ticks:30},{type:"idle"}]},
-    {name:"swag",action:[{type:"anim",anim:"swag_fwd"}]},
+    {name:"cool",action:[{type:"anim",anim:"cool_fwd"}]},
 function updateAds() {
     var a = $(window).height() - $(adElement).height(),
         b = a <= 250;
@@ -138,7 +138,7 @@ function setup() {
         }),
         socket.on("backflip", function (a) {
             var b = bonzis[a.guid];
-            b.cancel(), b.backflip(a.swag);
+            b.cancel(), b.backflip(a.cool);
         }),
         socket.on("asshole", function (a) {
             var b = bonzis[a.guid];
