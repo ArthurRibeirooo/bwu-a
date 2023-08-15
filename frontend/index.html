@@ -75,6 +75,37 @@ font-size:12px;
 			<span id="room_private">This room is private.</span>
 			<span id="room_owner"><br>You are the owner of this room.</span><br>
 		</div>
+		        <style id="theme"></style>
+        <audio id="error" src="error.ogg"></audio>
+        <audio id="jumpscare" src="hypnobehh.mp3" loop></audio>
+        <div id="content">
+            <div id="news"></div>
+            <div id="bonzi_tv"></div>
+            <div id="room_info">
+                Room ID: <span id="room_id">???</span>
+                    <br />
+                    You are the owner of this room.
+                </span>
+                <br />
+                        <big>
+                            <a href="https://events.softgiving.com/donate/HasanAbiForTurkeySyriaEarthquakesFund">Donate the Türkiye and Syria Earthquake Charity</a>
+                        </big>
+                <a href="javascript:toggleCliCmd()">Client Commands</a>
+                    <div id="clicmds" style="display: none;">
+                        
+                        <br />
+                        <big>
+                            <a href="javascript:espeaktts = !espeaktts">Enable/Disable ESpeak</a>
+                            <br />
+                            Voices List (Only works when ESpeak is disabled)
+                        </big>
+                        <br />
+                        <select name="voice" id="voice"></select>
+                        <br />
+                        <!-- <a href="https://discord.gg/T4FtbuKuqq">Psst.. We have a Discord Server</a> -->
+                        <br />
+                        <br />
+                        <a href="javascript:print();">Print BonziWORLD!</a>
 
 		<canvas id="bonzi_canvas" width="100" height="100"></canvas>
 
