@@ -1,11 +1,6 @@
 "use strict";
 var passcode = "";
 var err = false;
-var emotes = [
-    {name:"earth",action:[{type:"anim",anim:"earth_fwd", ticks:20},{type:"idle"}]},
-    {name:"surf",action:[{type:"anim",anim:"surf_fwd", ticks:30},{type:"idle"}]},
-    {name:"swag",action:[{type:"anim",anim:"swag_fwd"}]},
-];
 function updateAds() {
     var a = $(window).height() - $(adElement).height(),
         b = a <= 250;
@@ -529,7 +524,7 @@ var _createClass = (function () {
                     key: "backflip",
                     value: function (a) {
                         var b = [{ type: "anim", anim: "backflip", ticks: 15 }];
-                        a && (b.push({ type: "anim", anim: "swag_fwd", ticks: 30 }), b.push({ type: "idle" })), this.runSingleEvent(b);
+                        a && (b.push({ type: "anim", anim: "cool_fwd", ticks: 30 }), b.push({ type: "idle" })), this.runSingleEvent(b);
                     },
                 },
                 {
@@ -611,16 +606,16 @@ var _createClass = (function () {
                 beat_fwd: [101, 103, "beat_still", 1],
                 beat_still: [104, 107, "beat_still", 1],
                 beat_back: { frames: range(103, 101), next: "idle", speed: 1 },
-                swag_fwd: [108, 124, "swag_still", 1],
-                swag_still: 125,
-                swag_back: { frames: range(124, 108), next: "idle", speed: 1 },
-                swag_right_fwd: [126, 128, "swag_right_still", 1],
-                swag_right_still: 129,
-                swag_right_back: { frames: range(128, 126), next: "idle", speed: 1 },
-                swag_left_fwd: [131, 133, "swag_left_still", 1],
-                swag_left_still: 134,
-                swag_left_back: { frames: range(133, 131), next: "swag_still", speed: 1 },
-                swag_adjust: { frames: [124, 123, 122, 121, 120, 135, 136, 135, 120, 121, 122, 123, 124], next: "swag_still", speed: 1 },
+                cool_fwd: [108, 124, "cool_still", 1],
+                cool_still: 125,
+                cool_back: { frames: range(124, 108), next: "idle", speed: 1 },
+                cool_right_fwd: [126, 128, "cool_right_still", 1],
+                cool_right_still: 129,
+                cool_right_back: { frames: range(128, 126), next: "idle", speed: 1 },
+                cool_left_fwd: [131, 133, "cool_left_still", 1],
+                cool_left_still: 134,
+                cool_left_back: { frames: range(133, 131), next: "cool_still", speed: 1 },
+                cool_adjust: { frames: [124, 123, 122, 121, 120, 135, 136, 135, 120, 121, 122, 123, 124], next: "cool_still", speed: 1 },
                 present_fwd: [137, 141, "present_still", 1],
                 present_still: 142,
                 present_back: { frames: range(141, 137), next: "idle", speed: 1 },
@@ -657,11 +652,11 @@ var _createClass = (function () {
             lean_left_still: "lean_left_back",
             beat_fwd: "beat_back",
             beat_still: "beat_back",
-            swag_fwd: "swag_back",
-            swag_still: "swag_back",
-            swag_adjust: "swag_back",
-            swag_left_fwd: "swag_left_back",
-            swag_left_still: "swag_left_back",
+            cool_fwd: "cool_back",
+            cool_still: "cool_back",
+            cool_adjust: "cool_back",
+            cool_left_fwd: "cool_left_back",
+            cool_left_still: "cool_left_back",
             present_fwd: "present_back",
             present_still: "present_back",
             look_left_fwd: "look_left_back",
@@ -805,7 +800,7 @@ var _createClass = (function () {
         { type: "idle" },
     ]),
     (BonziData.event_list_triggered = [
-        { type: "anim", anim: "swag_fwd", ticks: 30 },
+        { type: "anim", anim: "cool_fwd", ticks: 30 },
         {
             type: "text",
             text: "I sexually identify as BonziBUDDY. Ever since I was a young gorilla I dreamed of invading desktops dropping hot sticky tootorals on disgusting PC users.",
