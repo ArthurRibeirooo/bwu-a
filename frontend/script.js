@@ -1,6 +1,10 @@
 "use strict";
 var passcode = "";
 var err = false;
+var emotes = [
+    {name:"earth",action:[{type:"anim",anim:"earth_fwd", ticks:20},{type:"idle"}]},
+    {name:"surf",action:[{type:"anim",anim:"surf_fwd", ticks:30},{type:"idle"}]},
+    {name:"swag",action:[{type:"anim",anim:"swag_fwd"}]},
 function updateAds() {
     var a = $(window).height() - $(adElement).height(),
         b = a <= 250;
